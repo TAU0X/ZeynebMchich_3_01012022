@@ -1,0 +1,76 @@
+@import "./utils/vars" ;
+
+.global-frame{
+    margin: 0%;
+    width: $width-complet;
+    
+}
+*{
+    font-family: "Roboto", sans-serif;
+}
+.header{
+    width: $width-complet;
+   
+ &__logo{
+   
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 15%;
+        padding: $padding;
+    }
+}
+}
+form{
+     box-shadow: 0 5px 2px -2px rgb(180, 180, 180) inset;
+     width: $width-complet;
+     padding: $padding;
+     background: $bg-color;
+     height: 50px;
+   @extend %center;
+   input{
+       padding: $padding;
+       border:none ;
+       background: $bg-color;
+       font-size: 90%;
+       border-radius: 10px ;
+   }
+   i{
+       padding: $padding;
+       color:#353535
+   }  
+ }
+.nav{
+    background-color: #f8f8f8;
+    padding-bottom: 5%;
+ &__sec{
+     
+    
+     &__btn{
+        @extend %center;
+        .btn {
+    border-radius: 30px;
+    font-size: 90%;
+      padding: 2%;
+      background: linear-gradient(
+        355deg, $color-one 0%, $color-two 10%, $color-three 100%);
+        color:white;
+    border: none;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    }
+
+}
+    .nav__sec__titre h2,p{
+        margin-top:3%; 
+ @extend %center;}
+
+    }
+}
+    .btn:hover{
+        opacity: 0.6;
+        transform: scale(1.05);
+        transition-duration: 0.5s ;
+    }

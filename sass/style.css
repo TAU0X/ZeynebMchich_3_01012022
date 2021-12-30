@@ -1,0 +1,89 @@
+form, .nav__sec__btn, .nav__sec .nav__sec__titre h2, .nav__sec p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.global-frame {
+  margin: 0%;
+  width: 100%;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  width: 100%;
+}
+
+.header__logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  padding: 1%;
+}
+
+form {
+  -webkit-box-shadow: 0 5px 2px -2px #b4b4b4 inset;
+          box-shadow: 0 5px 2px -2px #b4b4b4 inset;
+  width: 100%;
+  padding: 1%;
+  background: #eaeaea;
+  height: 50px;
+}
+
+form input {
+  padding: 1%;
+  border: none;
+  background: #eaeaea;
+  font-size: 90%;
+  border-radius: 10px;
+}
+
+form i {
+  padding: 1%;
+  color: #353535;
+}
+
+.nav {
+  background-color: #f8f8f8;
+  padding-bottom: 5%;
+}
+
+.nav__sec__btn .btn {
+  border-radius: 30px;
+  font-size: 90%;
+  padding: 2%;
+  background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 10%, #ff79da 100%);
+  color: white;
+  border: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.nav__sec .nav__sec__titre h2, .nav__sec p {
+  margin-top: 3%;
+}
+
+.btn:hover {
+  opacity: 0.6;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+/*# sourceMappingURL=style.css.map */
