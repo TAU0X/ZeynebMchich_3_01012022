@@ -156,10 +156,30 @@ overflow: hidden; }
     padding-left: 3%;
 }
 
-.like-btn{
-    font-size: 150%;
+.like{
+    font-size: 100%;
     float: right;
     padding-right: 5%;
+    padding-bottom: 2%;
+  transition: all 5ms linear;
+}
+.like:hover{
+    color: transparent;
+    transition: 1ms;
+}
+.liked{
+    color: transparent;
+    scale: 1;
+}
+.liked:hover{
+    scale: 1.1;
+        color: transparent;
+  background: linear-gradient(
+201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
+  -webkit-background-clip: text;
+  background-clip:text;
+  transition: all 5ms linear ;
+
 }
 
 footer{
@@ -175,10 +195,17 @@ footer{
     color: white;
     position: relative;
     transition: color 250ms linear;
+    width: 100%;
+    background-color: #353535;
+    color: white;
+    
     li{
        padding-top: 5%;  
-
+       
 } 
+a{
+    transition-duration: 2s;
+}
 p{
     font-family: "Shrikhand";
     font-size: 130%;
@@ -190,6 +217,11 @@ p{
   flex-direction: column;
  
   }
-  footer a :hover{
-      color: $color-two;
-  }
+  footer a:hover {
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition:  2s linear;
+    background: linear-gradient(
+201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;}
