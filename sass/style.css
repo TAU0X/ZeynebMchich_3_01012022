@@ -57,10 +57,6 @@ form i {
   width: 100%;
 }
 
-.nav__sec {
-  padding: 1%;
-}
-
 .nav__sec__btn .btn {
   border-radius: 30px;
   font-size: 90%;
@@ -78,8 +74,32 @@ form i {
           transition-duration: 0.4s;
 }
 
+@media only screen and (max-width: 750px) {
+  .nav__sec__btn .btn {
+    font-size: 100%;
+    padding: 5%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .nav__sec__btn .btn {
+    margin-top: 5%;
+  }
+}
+
 .nav__sec .nav__sec__titre h2, .nav__sec p {
   margin-top: 3%;
+  padding: 1%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .nav__sec .nav__sec__titre h2, .nav__sec p {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .btn:hover {
@@ -97,6 +117,35 @@ form i {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding-bottom: 5%;
+}
+
+@media only screen and (max-width: 991px) {
+  .list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .list .card {
+    width: 30%;
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .list .card {
+    height: 60px;
+    width: 80%;
+    margin-top: 5%;
+  }
 }
 
 .card {
@@ -151,6 +200,12 @@ form i {
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 750px) {
+  .new {
+    margin-top: 3%;
+  }
+}
+
 .menu {
   width: 100%;
   display: -webkit-box;
@@ -160,6 +215,17 @@ form i {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 750px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .menu__item {
@@ -178,6 +244,12 @@ form i {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 750px) {
+  .menu__item {
+    width: 80%;
+  }
+}
+
 .menu__item__img {
   position: relative;
   width: 100%;
@@ -193,13 +265,20 @@ form i {
 
 .menu__item__text {
   padding-left: 3%;
+  height: 100px;
+}
+
+.menu__item__text h3, .menu__item__text p {
+  padding-top: 2%;
+  font-size: 150%;
 }
 
 .like {
-  font-size: 100%;
+  font-size: 80%;
   float: right;
   padding-right: 5%;
   padding-bottom: 2%;
+  margin-top: -8%;
   -webkit-transition: all 5ms linear;
   transition: all 5ms linear;
 }
@@ -215,19 +294,19 @@ form i {
   scale: 1;
 }
 
-.liked:hover {
+.like:hover .liked {
   scale: 1.1;
   color: transparent;
   background: linear-gradient(201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-transition: all 5ms linear;
-  transition: all 5ms linear;
+  -webkit-transition: all 3s linear ease-in;
+  transition: all 3s linear ease-in;
 }
 
 footer {
   margin-top: 8%;
-  height: 170px;
+  height: 200px;
   background-color: #353535;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,18 +329,19 @@ footer {
   color: white;
 }
 
+footer p {
+  font-family: "Shrikhand";
+  font-size: 130%;
+}
+
 footer li {
   padding-top: 5%;
 }
 
 footer a {
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-}
-
-footer p {
-  font-family: "Shrikhand";
-  font-size: 130%;
+  opacity: 1;
+  -webkit-transition: 2s linear ease;
+  transition: 2s linear ease;
 }
 
 footer ul {
@@ -278,10 +358,12 @@ footer ul {
 footer a:hover {
   -webkit-text-fill-color: transparent;
   opacity: 1;
-  -webkit-transition: 2s linear;
-  transition: 2s linear;
   background: linear-gradient(201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-transition: 1s linear ease;
+  transition: 1s linear ease;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 /*# sourceMappingURL=style.css.map */

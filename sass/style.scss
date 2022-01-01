@@ -44,12 +44,17 @@ form{
     background-color: #f8f8f8;
     padding-bottom: 5%;
      width: 100%;
+ 
  &__sec{
     
     
      &__btn{
         @extend %center;
         .btn {
+            @media only screen and (max-width: 750px){
+                font-size: 100%;
+            padding: 5%;
+            } 
     border-radius: 30px;
     font-size: 90%;
       padding: 2%;
@@ -60,14 +65,25 @@ form{
     transform: scale(1);
     transition-property: transform;
     transition-duration: 0.4s;
+        @media only screen and (max-width: 991px) {
+         
+            margin-top:5%; 
+           
     
+    
+    }
     }
 
 }
     .nav__sec__titre h2,p{
         margin-top:3%; 
- @extend %center;}
- padding: $padding;
+         padding: $padding;
+ @extend %center;
+ align-items: center;
+ @media only screen and (max-width: 750px){
+     flex-wrap: wrap;} }
+ 
+
 
     }
 }
@@ -80,6 +96,26 @@ form{
         display: flex;
         justify-content: space-around;
         padding-bottom: 5%;
+        @media only screen and (max-width: 991px) {
+       
+            flex-wrap: wrap;
+            .card{
+                width: 30%;
+                margin-top: 5%;
+            }
+        }
+        @media only screen and (max-width: 750px) {
+               
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: center;
+                .card{
+                    height: 60px;
+                    width: 80%;
+                    margin-top: 5%;
+                }
+            }
+        
     }
     .card{
         border-radius: 20px;
@@ -124,14 +160,26 @@ color: $color-two;
     top: -5px;
     right: 5px;
     border-radius: 5px;
+    @media only screen and (max-width: 750px) {
+        margin-top: 3%;
+    }
 
 }
 .menu{
+    
     width: 100%;
         display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;}
+    flex-wrap: wrap;
+    @media only screen and (max-width: 750px){
+        display: flex;
+        justify-content: center;
+    }
+}
     .menu__item{
+        @media only screen and (max-width: 750px){
+            width: 80%;
+        }      
     border-radius: 20px;
     scale: (1);
     transition-property: transform;
@@ -154,13 +202,20 @@ overflow: hidden; }
 }
 .menu__item__text{
     padding-left: 3%;
+    height: 100px;
+    
+   h3,p{
+       padding-top: 2%;
+       font-size: 150%;
+   }
 }
 
 .like{
-    font-size: 100%;
+    font-size: 80%;
     float: right;
     padding-right: 5%;
     padding-bottom: 2%;
+    margin-top:-8% ;
   transition: all 5ms linear;
 }
 .like:hover{
@@ -171,20 +226,21 @@ overflow: hidden; }
     color: transparent;
     scale: 1;
 }
-.liked:hover{
+.like:hover .liked{
     scale: 1.1;
         color: transparent;
   background: linear-gradient(
 201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
   -webkit-background-clip: text;
   background-clip:text;
-  transition: all 5ms linear ;
+  
+  transition: all 3s linear ease-in;
 
 }
 
 footer{
     margin-top: 8%;
-    height: 170px;
+    height: 200px;
     background-color: #353535;
     display: flex;
     justify-content: center;
@@ -198,19 +254,21 @@ footer{
     width: 100%;
     background-color: #353535;
     color: white;
-    
+    p{
+    font-family: "Shrikhand";
+    font-size: 130%;
+}
     li{
        padding-top: 5%;  
        
 } 
 a{
-    transition-duration: 2s;
+    opacity: 1;
+    transition: 2s linear ease;
 }
-p{
-    font-family: "Shrikhand";
-    font-size: 130%;
 }
-    }
+
+
   footer ul{
       list-style-type: none;
     display: flex;
@@ -220,8 +278,11 @@ p{
   footer a:hover {
     -webkit-text-fill-color: transparent;
     opacity: 1;
-    transition:  2s linear;
+    
     background: linear-gradient(
 201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
     -webkit-background-clip: text;
-    background-clip: text;}
+    background-clip: text;
+transition: 1s linear ease;
+transition-delay:1s ;
+}
