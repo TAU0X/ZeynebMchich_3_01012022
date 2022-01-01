@@ -1,19 +1,13 @@
 $bg-color:#eaeaea;
 $width-complet:100%;
 $padding: 1%;
-$color-one:#4a4a9e;
+$color-one:#49499c;
 $color-two:#9356dc;
 $color-three:#ff79da;
+$heart-red: #cd0928;
+$heart-default-color: #000;
 %center{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-@mixin hover($color) {
-    @if darken($color) {
-      $color: complement($color-primary);
-    }@else{
-      $color: adjust-hue($color, -163);
-    }
-    background: $color;
-  }

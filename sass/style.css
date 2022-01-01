@@ -1,4 +1,5 @@
-form, .nav__sec__btn, .nav__sec .nav__sec__titre h2, .nav__sec p {
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.header__logo h1, form, .nav__sec__btn, .nav__sec .nav__sec__titre h2, .nav__sec p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,18 +18,15 @@ form, .nav__sec__btn, .nav__sec .nav__sec__titre h2, .nav__sec p {
 
 * {
   font-family: "Roboto", sans-serif;
+  margin: 0%;
 }
 
 .header {
   width: 100%;
 }
 
-.header__logo img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 15%;
-  padding: 1%;
+.header__logo h1 {
+  font-family: "Shrikhand";
 }
 
 form {
@@ -56,13 +54,18 @@ form i {
 .nav {
   background-color: #f8f8f8;
   padding-bottom: 5%;
+  width: 100%;
+}
+
+.nav__sec {
+  padding: 1%;
 }
 
 .nav__sec__btn .btn {
   border-radius: 30px;
   font-size: 90%;
   padding: 2%;
-  background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 10%, #ff79da 100%);
+  background: linear-gradient(355deg, #49499c 0%, #9356dc 10%, #ff79da 100%);
   color: white;
   border: none;
   -webkit-transform: scale(1);
@@ -71,8 +74,8 @@ form i {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 .nav__sec .nav__sec__titre h2, .nav__sec p {
@@ -83,7 +86,164 @@ form i {
   opacity: 0.6;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 5%;
+}
+
+.card {
+  border-radius: 20px;
+  font-size: 110%;
+  padding: 2%;
+  -webkit-box-shadow: 0px 0px 25px 10px rgba(186, 186, 186, 0.329);
+          box-shadow: 0px 0px 25px 10px rgba(186, 186, 186, 0.329);
+  width: 20%;
+  background-color: #e4e3e3;
+  overflow: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__num {
+  background-color: #9356dc;
+  color: white;
+  padding: 2% 4% 2% 4%;
+  border-radius: 100%;
+  margin-left: -19%;
+}
+
+.card__icon {
+  color: #797979;
+}
+
+.card:hover {
+  background-color: rgba(146, 78, 211, 0.171);
+}
+
+.card:hover i {
+  color: #9356dc;
+}
+
+.new {
+  background-color: #b9ecb9;
+  padding: 3%;
+  color: #306b4d;
+  font-weight: bold;
+  float: right;
+  overflow: visible;
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  border-radius: 5px;
+}
+
+.menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu__item {
+  border-radius: 20px;
+  scale: 1;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  width: 40%;
+  margin-top: 10%;
+  -webkit-box-shadow: 0px 0px 25px 10px rgba(128, 128, 128, 0.329);
+          box-shadow: 0px 0px 25px 10px rgba(128, 128, 128, 0.329);
+  overflow: hidden;
+}
+
+.menu__item__img {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.menu__item:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition-duration: all 0.4s;
+          transition-duration: all 0.4s;
+}
+
+.menu__item__text {
+  padding-left: 3%;
+}
+
+.like-btn {
+  font-size: 150%;
+  float: right;
+  padding-right: 5%;
+}
+
+footer {
+  margin-top: 8%;
+  height: 170px;
+  background-color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2%;
+  color: white;
+  font-size: 120%;
+  color: white;
+  position: relative;
+  -webkit-transition: color 250ms linear;
+  transition: color 250ms linear;
+}
+
+footer li {
+  padding-top: 5%;
+}
+
+footer p {
+  font-family: "Shrikhand";
+  font-size: 130%;
+}
+
+footer ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer a :hover {
+  color: #9356dc;
 }
 /*# sourceMappingURL=style.css.map */

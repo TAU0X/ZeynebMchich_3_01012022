@@ -1,4 +1,5 @@
 @import "./utils/vars" ;
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 .global-frame{
     margin: 0%;
@@ -7,18 +8,16 @@
 }
 *{
     font-family: "Roboto", sans-serif;
+    margin: 0%;
 }
 .header{
     width: $width-complet;
    
  &__logo{
    
-    img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 15%;
-        padding: $padding;
+    h1{
+        font-family: "Shrikhand";
+        @extend %center
     }
 }
 }
@@ -44,8 +43,9 @@ form{
 .nav{
     background-color: #f8f8f8;
     padding-bottom: 5%;
+     width: 100%;
  &__sec{
-     
+    
     
      &__btn{
         @extend %center;
@@ -59,18 +59,137 @@ form{
     border: none;
     transform: scale(1);
     transition-property: transform;
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
+    
     }
 
 }
     .nav__sec__titre h2,p{
         margin-top:3%; 
  @extend %center;}
+ padding: $padding;
 
     }
 }
     .btn:hover{
         opacity: 0.6;
         transform: scale(1.05);
-        transition-duration: 0.5s ;
+        transition-duration: 0.4s;
     }
+    .list{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 5%;
+    }
+    .card{
+        border-radius: 20px;
+        font-size: 110%;
+          padding: 2%;
+          box-shadow: 0px 0px 25px 10px hsla(0, 0%, 73%, 0.329);
+          width:20%;
+          background-color: #e4e3e3;
+          overflow: visible;
+          display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+          &__num{
+              background-color: $color-two;
+              color: white;
+              padding: 2% 4% 2% 4%;
+              border-radius: 100%;
+            margin-left: -19%;
+          }
+          &__icon{
+              color: #797979;
+          }
+
+    }
+    .card:hover{
+        background-color:rgba(146, 78, 211, 0.171);
+    & i{
+color: $color-two;
+    }
+}
+
+
+.new{
+    background-color: #b9ecb9;
+    padding: 3%;
+    color: #306b4d;
+    font-weight: bold;
+    float: right;
+    overflow: visible;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    border-radius: 5px;
+
+}
+.menu{
+    width: 100%;
+        display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;}
+    .menu__item{
+    border-radius: 20px;
+    scale: (1);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    width: 40%;
+    margin-top: 10%;
+    box-shadow: 0px 0px 25px 10px hsla(0, 0%, 50%, 0.329);
+    &__img{
+    position: relative;
+    width: 100%;   
+    overflow: visible;
+  
+    }
+overflow: hidden; }
+   
+
+.menu__item:hover{
+    transform: scale(1.03);
+    transition-duration: all 0.4s;
+}
+.menu__item__text{
+    padding-left: 3%;
+}
+
+.like-btn{
+    font-size: 150%;
+    float: right;
+    padding-right: 5%;
+}
+
+footer{
+    margin-top: 8%;
+    height: 170px;
+    background-color: #353535;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    color:white;
+    font-size: 120%;
+    color: white;
+    position: relative;
+    transition: color 250ms linear;
+    li{
+       padding-top: 5%;  
+
+} 
+p{
+    font-family: "Shrikhand";
+    font-size: 130%;
+}
+    }
+  footer ul{
+      list-style-type: none;
+    display: flex;
+  flex-direction: column;
+ 
+  }
+  footer a :hover{
+      color: $color-two;
+  }
