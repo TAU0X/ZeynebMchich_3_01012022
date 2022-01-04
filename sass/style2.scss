@@ -31,21 +31,30 @@ a{
   img{
         width: 100%;
         overflow: visible;
-        height: 400px;
+    
     }}
     .menu{
 
- 
      &__titre {
-         width: 100%;
+         margin-top: 23%;
           display: flex;
           justify-content: space-between;  
-          padding:2% 0% 2% 0% ;
+          padding:2% 1% 2% 0% ;
           overflow: visible;
           background-color: white;
           position: relative;
          border-top-left-radius: 80px;
         border-top-right-radius: 80px;
+        height: 190px;
+        width: 100%;
+        @media only screen and (max-width: 991px) {
+            margin-top: 5%;}
+        @media only screen and (max-width: 750px) {
+            margin-top: -15%;
+            border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+
+            }
 
         h1{
           font-family: "shrikhand";
@@ -84,7 +93,7 @@ a{
 
 .menu__items{
     flex-wrap: wrap;
-    width: 100%;
+    background-color: white;
     .first,.second, .third{
         display: flex;
         justify-content: center;
@@ -95,6 +104,7 @@ a{
         
         h3{
         margin-left: 10px;
+        overflow: visible;
         font-size: 120%;
          width: 50px;
         font-weight: lighter;
@@ -103,8 +113,6 @@ a{
     }
     }
 &__card{
-   overflow: hidden;
-    text-overflow: ellipsis;
     width: 80%;
     align-items: baseline;
     position: relative;
@@ -117,7 +125,9 @@ a{
     box-shadow: 0px 0px 25px 10px hsla(0, 0%, 73%, 0.329);
     animation: fadein ease-out 2s;
     animation-delay: 0s;
-    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
    .validation{
      
        width: 20%;
@@ -131,6 +141,14 @@ a{
        margin-top: -15%;
        margin-left: 100%;
        transition:all .5s linear ;
+       @media only screen and (max-width: 991px) {
+        margin-top: -24%;}
+        @media only screen and (max-width: 750px) {
+        margin-top: -32%;
+        }
+
+
+
        i{
            color: white;
            font-size: 140%;
@@ -163,13 +181,18 @@ a{
     position: absolute; 
     overflow: visible;
     margin-right: 320px;
+    @media only screen and (max-width: 750px) {
+    margin-right: 125px;
+        }
 }
 
   }
 }
  .menu__items__card:hover {
     box-shadow: 0px 0px 25px 10px hsla(0, 0%, 70%, 0.329);
-
+p,h3{
+    width: 75%;
+}
  .validation {
     margin-left: 80%;
  i{
@@ -198,6 +221,11 @@ footer{
     width: 100%;
     background-color: #353535;
     color: white;
+    @media only screen and (max-width: 750px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
     p{
     font-family: "Shrikhand";
     font-size: 130%;
@@ -212,7 +240,43 @@ a{
     transition: all 4s linear ;
 }
 }
+.command-btn{ 
+     @extend %center;
+     margin-top: 5%;
+ 
 
+    .btn {
+        @media only screen and (max-width: 750px){
+            font-size: 100%;
+        padding: 5%;
+        } 
+border-radius: 50px;
+font-size: 150%;
+  padding: 2%;
+  background: linear-gradient(
+    355deg, $color-one 0%, $color-two 10%, $color-three 100%);
+    color:white;
+border: none;  
+width: 25%;
+transform: scale(1);
+transition-property: transform;
+transition-duration: 0.4s;
+box-shadow: 0px 0px 25px 10px hsla(0, 0%, 50%, 0.329);
+    @media only screen and (max-width: 991px) {
+     
+        margin-top:5%; 
+       
+
+
+}
+}
+
+}
+.btn:hover{
+    opacity: 0.6;
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+}
 footer ul{
     list-style-type: none;
   display: flex;
