@@ -11,6 +11,66 @@
           justify-content: center;
 }
 
+@-webkit-keyframes coloring {
+  0% {
+    background: linear-gradient(201deg, #6464b7 0%, #a16be0 51%, #ff93e1 80%);
+    -webkit-background-clip: text;
+  }
+  25% {
+    background: linear-gradient(201deg, #6464b7 0%, #a16be0 49%, #ff93e1 90%);
+    -webkit-background-clip: text;
+  }
+  50% {
+    background: linear-gradient(201deg, #6464b7 0%, #a16be0 41%, #ff93e1 100%);
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: linear-gradient(201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
+    -webkit-background-clip: text;
+  }
+}
+
+@keyframes coloring {
+  0% {
+    background: linear-gradient(201deg, #6464b7 0%, #a16be0 51%, #ff93e1 80%);
+    -webkit-background-clip: text;
+  }
+  25% {
+    background: linear-gradient(201deg, #6464b7 0%, #a16be0 49%, #ff93e1 90%);
+    -webkit-background-clip: text;
+  }
+  50% {
+    background: linear-gradient(201deg, #6464b7 0%, #a16be0 41%, #ff93e1 100%);
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: linear-gradient(201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
+    -webkit-background-clip: text;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    margin-top: 10%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 3%;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    margin-top: 10%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 3%;
+  }
+}
+
 .global-frame {
   margin: 0%;
   width: 100%;
@@ -187,6 +247,15 @@ form i {
   color: #9356dc;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
 .new {
   background-color: #b9ecb9;
   padding: 3%;
@@ -279,8 +348,8 @@ form i {
   padding-right: 5%;
   padding-bottom: 2%;
   margin-top: -8%;
-  -webkit-transition: all 5ms linear;
-  transition: all 5ms linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
 .like:hover {
@@ -290,18 +359,23 @@ form i {
 }
 
 .liked {
+  cursor: pointer;
   color: transparent;
   scale: 1;
 }
 
 .like:hover .liked {
   scale: 1.1;
-  color: transparent;
-  background: linear-gradient(201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-transition: all 3s linear ease-in;
-  transition: all 3s linear ease-in;
+  -webkit-animation: coloring 500ms;
+          animation: coloring 500ms;
+  -webkit-transition: ease-in 1s;
+  transition: ease-in 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 footer {
@@ -340,8 +414,9 @@ footer li {
 
 footer a {
   opacity: 1;
-  -webkit-transition: 2s linear ease;
-  transition: 2s linear ease;
+  color: white;
+  -webkit-transition: all 4s linear;
+  transition: all 4s linear;
 }
 
 footer ul {
@@ -358,12 +433,15 @@ footer ul {
 footer a:hover {
   -webkit-text-fill-color: transparent;
   opacity: 1;
-  background: linear-gradient(201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
-  -webkit-background-clip: text;
+  cursor: pointer;
+  -webkit-animation: coloring 500ms;
+          animation: coloring 500ms;
   background-clip: text;
-  -webkit-transition: 1s linear ease;
-  transition: 1s linear ease;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition: ease-in 2s;
+  transition: ease-in 2s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 /*# sourceMappingURL=style.css.map */

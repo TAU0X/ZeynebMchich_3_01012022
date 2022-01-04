@@ -1,0 +1,233 @@
+@import "./utils/vars" ;
+*{
+    font-family: sans-serif;
+}
+a{
+    color: black;
+     text-decoration: none;
+     &:visited{
+         color: black;
+     }}
+.header{
+    width: $width-complet;
+   height: 80px;
+
+   
+    h1{
+        font-family: "Shrikhand";
+        @extend %center;
+    
+    }
+    .back{
+        float: left;
+        font-size: 150%;
+    }
+   
+}
+  .bg-img
+  {
+      width: 100%;
+      height: 300px;
+  img{
+        width: 100%;
+        overflow: visible;
+        height: 400px;
+    }}
+    .menu{
+
+ 
+     &__titre {
+         width: 100%;
+          display: flex;
+          justify-content: space-between;  
+          padding:2% 0% 2% 0% ;
+          overflow: visible;
+          background-color: white;
+          position: relative;
+         border-top-left-radius: 80px;
+        border-top-right-radius: 80px;
+
+        h1{
+          font-family: "shrikhand";
+          padding-left: 1%;
+         
+         }
+          span{
+              padding-top: 3%;
+              padding-right: 2%;
+          }
+          .like{
+           
+          transition: all 1s linear ;
+        }
+        .like:hover{
+            color: transparent;
+            transition: 5ms;
+        }
+        .liked{
+            color: transparent;
+            scale: 1;
+        }
+        .like:hover .liked{
+            scale: 1.1;
+        
+          -webkit-background-clip: text;
+          background-clip:text;
+          animation: coloring 500ms  ;
+          transition: ease-in 1s;
+          animation-delay: 0s;
+          animation-fill-mode: forwards;
+        
+        }
+    }
+}
+
+.menu__items{
+    flex-wrap: wrap;
+    width: 100%;
+    .first,.second, .third{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__title{
+        
+        h3{
+        margin-left: 10px;
+        font-size: 120%;
+         width: 50px;
+        font-weight: lighter;
+        display:inline-block;
+        border-bottom: 5px #9cfcc1 solid ;
+    }
+    }
+&__card{
+   overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+    align-items: baseline;
+    position: relative;
+    cursor: pointer;
+    font-size: 110%;
+    margin-top: 3%;
+    padding: 1%;
+    border-radius: 20px;
+    height: 15%;
+    box-shadow: 0px 0px 25px 10px hsla(0, 0%, 73%, 0.329);
+    animation: fadein ease-out 2s;
+    animation-delay: 0s;
+    
+   .validation{
+     
+       width: 20%;
+       height: 200px;
+       position: absolute;
+       background-color: #9cfcc1;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       float: right;
+       margin-top: -15%;
+       margin-left: 100%;
+       transition:all .5s linear ;
+       i{
+           color: white;
+           font-size: 140%;
+           transition:all .5s linear ;
+           animation-fill-mode: forwards;
+       }
+
+
+   }
+
+
+
+
+    h3{
+       margin: 10px;
+      width: 95%;
+      text-overflow: ellipsis;
+   }
+
+   p{
+       position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 10px;
+    width: 95%; 
+    margin-top: 5%;
+   } 
+
+   .prix2{
+    position: absolute; 
+    overflow: visible;
+    margin-right: 320px;
+}
+
+  }
+}
+ .menu__items__card:hover {
+    box-shadow: 0px 0px 25px 10px hsla(0, 0%, 70%, 0.329);
+
+ .validation {
+    margin-left: 80%;
+ i{
+     transform: rotatez(360deg);  
+    animation-fill-mode:forwards;
+}
+
+}
+
+   
+   
+} 
+footer{
+    margin-top: 8%;
+    height: 200px;
+    background-color: #353535;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    color:white;
+    font-size: 120%;
+    color: white;
+    position: relative;
+    transition: color 250ms linear;
+    width: 100%;
+    background-color: #353535;
+    color: white;
+    p{
+    font-family: "Shrikhand";
+    font-size: 130%;
+}
+    li{
+       padding-top: 5%;  
+       
+} 
+a{
+    opacity: 1;   
+    color: white;
+    transition: all 4s linear ;
+}
+}
+
+footer ul{
+    list-style-type: none;
+  display: flex;
+flex-direction: column;
+
+}
+footer a:hover {
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  cursor: pointer;
+  animation: coloring 500ms  ;
+  background-clip: text;
+  transition: ease-in 2s;
+transition-delay:0s ;
+animation-fill-mode: forwards;
+}
+
+

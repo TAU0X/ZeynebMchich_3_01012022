@@ -4,10 +4,39 @@ $padding: 1%;
 $color-one:#49499c;
 $color-two:#9356dc;
 $color-three:#ff79da;
-$heart-red: #cd0928;
-$heart-default-color: #000;
 %center{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@keyframes coloring {
+   
+    0%{
+        background: linear-gradient(
+            201deg, #6464b7 0%, #a16be0 51%, #ff93e1 80%);
+             -webkit-background-clip: text; }
+             25%{
+                background: linear-gradient(
+                    201deg, #6464b7 0%, #a16be0 49%, #ff93e1 90%);
+                     -webkit-background-clip: text; }
+    50%{
+        background: linear-gradient(
+            201deg, #6464b7 0%, #a16be0 41%, #ff93e1 100%);
+             -webkit-background-clip: text; }
+
+     100%{
+        background: linear-gradient(
+            201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
+              -webkit-background-clip: text; }
+}
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        margin-top: 10%;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 3%;
+    }
 }
