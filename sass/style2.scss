@@ -28,6 +28,7 @@ a{
   {
       width: 100%;
       height: 300px;
+      
   img{
         width: 100%;
         overflow: visible;
@@ -50,7 +51,7 @@ a{
         @media only screen and (max-width: 991px) {
             margin-top: 5%;}
         @media only screen and (max-width: 750px) {
-            margin-top: -15%;
+            margin-top: -35%;
             border-top-left-radius: 40px;
         border-top-right-radius: 40px;
 
@@ -64,6 +65,9 @@ a{
           span{
               padding-top: 3%;
               padding-right: 2%;
+               @media only screen and (max-width: 750px) {
+                margin-top: 4%;
+                }
           }
           .like{
            
@@ -94,11 +98,20 @@ a{
 .menu__items{
     flex-wrap: wrap;
     background-color: white;
+    @media only screen and (max-width: 750px) {
+        margin-top: -25%;
+        
+
+        }
     .first,.second, .third{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        @media only screen and (max-width: 750px) {
+            position: relative;
+            background-color: white;
+            }
     }
     &__title{
         
@@ -110,11 +123,20 @@ a{
         font-weight: lighter;
         display:inline-block;
         border-bottom: 5px #9cfcc1 solid ;
+        @media only screen and (max-width: 750px) {
+            position: relative;
+           
+            padding-top:5% ;
+    
+            }
     }
     }
 &__card{
     width: 80%;
-    align-items: baseline;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
     position: relative;
     cursor: pointer;
     font-size: 110%;
@@ -131,21 +153,18 @@ a{
    .validation{
      
        width: 20%;
-       height: 200px;
+       height: 110%;
        position: absolute;
        background-color: #9cfcc1;
        display: flex;
        justify-content: center;
        align-items: center;
        float: right;
-       margin-top: -15%;
+       margin-top: -2%;
        margin-left: 100%;
        transition:all .5s linear ;
-       @media only screen and (max-width: 991px) {
-        margin-top: -24%;}
-        @media only screen and (max-width: 750px) {
-        margin-top: -32%;
-        }
+      
+        
 
 
 
@@ -154,6 +173,10 @@ a{
            font-size: 140%;
            transition:all .5s linear ;
            animation-fill-mode: forwards;
+           @media only screen and (max-width: 750px) {
+            font-size: 160%;
+        }
+           
        }
 
 
@@ -164,26 +187,28 @@ a{
 
     h3{
        margin: 10px;
-      width: 95%;
-      text-overflow: ellipsis;
+      width: 350px;
+        overflow: hidden;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
    }
 
    p{
-       position: relative;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+        width: 350px;
+        overflow: hidden;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     margin: 10px;
-    width: 95%; 
     margin-top: 5%;
    } 
 
    .prix2{
     position: absolute; 
     overflow: visible;
-    margin-right: 320px;
-    @media only screen and (max-width: 750px) {
-    margin-right: 125px;
-        }
+    margin-right: 155%;
+
 }
 
   }
@@ -191,7 +216,13 @@ a{
  .menu__items__card:hover {
     box-shadow: 0px 0px 25px 10px hsla(0, 0%, 70%, 0.329);
 p,h3{
-    width: 75%;
+    @media only screen and (max-width: 750px) {
+        width: 55%;;
+        overflow: hidden;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        }
 }
  .validation {
     margin-left: 80%;
@@ -249,6 +280,7 @@ a{
         @media only screen and (max-width: 750px){
             font-size: 100%;
         padding: 5%;
+        width: 50%;
         } 
 border-radius: 50px;
 font-size: 150%;

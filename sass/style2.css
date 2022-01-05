@@ -134,7 +134,7 @@ a:visited {
 
 @media only screen and (max-width: 750px) {
   .menu__titre {
-    margin-top: -15%;
+    margin-top: -35%;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
   }
@@ -148,6 +148,12 @@ a:visited {
 .menu__titre span {
   padding-top: 3%;
   padding-right: 2%;
+}
+
+@media only screen and (max-width: 750px) {
+  .menu__titre span {
+    margin-top: 4%;
+  }
 }
 
 .menu__titre .like {
@@ -186,6 +192,12 @@ a:visited {
   background-color: white;
 }
 
+@media only screen and (max-width: 750px) {
+  .menu__items {
+    margin-top: -25%;
+  }
+}
+
 .menu__items .first, .menu__items .second, .menu__items .third {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,6 +214,13 @@ a:visited {
           flex-direction: column;
 }
 
+@media only screen and (max-width: 750px) {
+  .menu__items .first, .menu__items .second, .menu__items .third {
+    position: relative;
+    background-color: white;
+  }
+}
+
 .menu__items__title h3 {
   margin-left: 10px;
   overflow: visible;
@@ -212,11 +231,28 @@ a:visited {
   border-bottom: 5px #9cfcc1 solid;
 }
 
+@media only screen and (max-width: 750px) {
+  .menu__items__title h3 {
+    position: relative;
+    padding-top: 5%;
+  }
+}
+
 .menu__items__card {
   width: 80%;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   cursor: pointer;
   font-size: 110%;
@@ -237,7 +273,7 @@ a:visited {
 
 .menu__items__card .validation {
   width: 20%;
-  height: 200px;
+  height: 110%;
   position: absolute;
   background-color: #9cfcc1;
   display: -webkit-box;
@@ -250,22 +286,10 @@ a:visited {
       -ms-flex-align: center;
           align-items: center;
   float: right;
-  margin-top: -15%;
+  margin-top: -2%;
   margin-left: 100%;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
-}
-
-@media only screen and (max-width: 991px) {
-  .menu__items__card .validation {
-    margin-top: -24%;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .menu__items__card .validation {
-    margin-top: -32%;
-  }
 }
 
 .menu__items__card .validation i {
@@ -277,31 +301,35 @@ a:visited {
           animation-fill-mode: forwards;
 }
 
+@media only screen and (max-width: 750px) {
+  .menu__items__card .validation i {
+    font-size: 160%;
+  }
+}
+
 .menu__items__card h3 {
   margin: 10px;
-  width: 95%;
+  width: 350px;
+  overflow: hidden;
+  position: relative;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu__items__card p {
+  width: 350px;
+  overflow: hidden;
   position: relative;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 10px;
-  width: 95%;
   margin-top: 5%;
 }
 
 .menu__items__card .prix2 {
   position: absolute;
   overflow: visible;
-  margin-right: 320px;
-}
-
-@media only screen and (max-width: 750px) {
-  .menu__items__card .prix2 {
-    margin-right: 125px;
-  }
+  margin-right: 155%;
 }
 
 .menu__items__card:hover {
@@ -309,8 +337,14 @@ a:visited {
           box-shadow: 0px 0px 25px 10px rgba(179, 179, 179, 0.329);
 }
 
-.menu__items__card:hover p, .menu__items__card:hover h3 {
-  width: 75%;
+@media only screen and (max-width: 750px) {
+  .menu__items__card:hover p, .menu__items__card:hover h3 {
+    width: 55%;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
 .menu__items__card:hover .validation {
@@ -407,6 +441,7 @@ footer a {
   .command-btn .btn {
     font-size: 100%;
     padding: 5%;
+    width: 50%;
   }
 }
 

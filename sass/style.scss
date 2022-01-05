@@ -61,6 +61,7 @@ form{
       padding: 2%;
       background: linear-gradient(
         355deg, $color-one 0%, $color-two 10%, $color-three 100%);
+         box-shadow: 0px 0px 25px 10px hsla(0, 0%, 50%, 0.329);
         color:white;
     border: none;
     transform: scale(1);
@@ -93,7 +94,10 @@ form{
         transform: scale(1.05);
         transition-duration: 0.4s;
     }
-    .list{
+    .box__title{
+        margin: 3%;
+    }
+    .box__list{
         display: flex;
         justify-content: space-around;
         padding-bottom: 5%;
@@ -136,6 +140,15 @@ form{
               padding: 2% 4% 2% 4%;
               border-radius: 100%;
             margin-left: -19%;
+            @media only screen and (max-width: 750px){
+                margin-left: -10%;
+            } 
+            @media only screen and (max-width: 991px) {
+                margin-left: -15%;
+               
+        
+        
+        }
           }
           &__icon{
               color: #797979;
@@ -224,6 +237,10 @@ overflow: hidden; }
     padding-bottom: 2%;
     margin-top:-8% ;
     transition: all 1s linear ;
+     @media only screen and (max-width: 750px){
+        font-size: 60%;
+        margin-top:-3% ;
+    } 
 }
 .like:hover{
     color: transparent;
