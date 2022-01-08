@@ -169,21 +169,23 @@ a:visited {
 
 .menu__titre .liked {
   color: transparent;
-  scale: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .menu__titre .like:hover .liked {
-  scale: 1.1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-animation: coloring 500ms;
-          animation: coloring 500ms;
+  animation: coloring 500ms;
   -webkit-transition: ease-in 1s;
   transition: ease-in 1s;
   -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .menu__items {
@@ -263,9 +265,9 @@ a:visited {
   -webkit-box-shadow: 0px 0px 25px 10px rgba(186, 186, 186, 0.329);
           box-shadow: 0px 0px 25px 10px rgba(186, 186, 186, 0.329);
   -webkit-animation: fadein ease-out 2s;
-          animation: fadein ease-out 2s;
+  animation: fadein ease-out 2s;
   -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -298,7 +300,7 @@ a:visited {
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @media only screen and (max-width: 750px) {
@@ -316,6 +318,12 @@ a:visited {
   white-space: nowrap;
 }
 
+@media only screen and (max-width: 750px) {
+  .menu__items__card h3 {
+    width: 80%;
+  }
+}
+
 .menu__items__card p {
   width: 350px;
   overflow: hidden;
@@ -324,6 +332,18 @@ a:visited {
   white-space: nowrap;
   margin: 10px;
   margin-top: 5%;
+}
+
+@media only screen and (max-width: 750px) {
+  .menu__items__card p {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .menu__items__card p {
+    width: 80%;
+  }
 }
 
 .menu__items__card .prix2 {
@@ -339,7 +359,7 @@ a:visited {
 
 @media only screen and (max-width: 750px) {
   .menu__items__card:hover p, .menu__items__card:hover h3 {
-    width: 55%;
+    width: 65%;
     overflow: hidden;
     position: relative;
     text-overflow: ellipsis;
@@ -354,8 +374,8 @@ a:visited {
 .menu__items__card:hover .validation i {
   -webkit-transform: rotatez(360deg);
           transform: rotatez(360deg);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
 }
 
 footer {
@@ -475,13 +495,14 @@ footer a:hover {
   opacity: 1;
   cursor: pointer;
   -webkit-animation: coloring 500ms;
-          animation: coloring 500ms;
+  animation: coloring 500ms;
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-transition: ease-in 2s;
   transition: ease-in 2s;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 /*# sourceMappingURL=style2.css.map */

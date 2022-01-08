@@ -317,7 +317,8 @@ a:visited {
 
 .menu__item {
   border-radius: 20px;
-  scale: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -346,8 +347,8 @@ a:visited {
 .menu__item:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
-  -webkit-transition-duration: all 0.4s;
-          transition-duration: all 0.4s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 .menu__item__text {
@@ -386,21 +387,23 @@ a:visited {
 .liked {
   cursor: pointer;
   color: transparent;
-  scale: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .like:hover .liked {
-  scale: 1.1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-animation: coloring 500ms;
-          animation: coloring 500ms;
+  animation: coloring 500ms;
   -webkit-transition: ease-in 1s;
   transition: ease-in 1s;
   -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 footer {
@@ -442,7 +445,7 @@ footer {
   }
 }
 
-footer p {
+footer p a {
   font-family: "Shrikhand";
   font-size: 130%;
 }
@@ -474,13 +477,14 @@ footer a:hover {
   opacity: 1;
   cursor: pointer;
   -webkit-animation: coloring 500ms;
-          animation: coloring 500ms;
+  animation: coloring 500ms;
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-transition: ease-in 2s;
   transition: ease-in 2s;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 /*# sourceMappingURL=style.css.map */
