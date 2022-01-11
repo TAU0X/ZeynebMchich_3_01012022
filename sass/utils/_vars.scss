@@ -30,6 +30,16 @@ $color-three:#ff79da;
             201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
               -webkit-background-clip: text; }
 }
+@-webkit-keyframes fadein{
+    0%{
+        opacity: 0;
+        margin-top: 10%;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 3%;
+    }
+}
 @keyframes fadein{
     0%{
         opacity: 0;
@@ -38,5 +48,59 @@ $color-three:#ff79da;
     100%{
         opacity: 1;
         margin-top: 3%;
+    }
+}
+@-webkit-keyframes fade{
+    0%{
+        opacity: 1;
+        z-index: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+@keyframes fade{
+    0%{
+        opacity: 1;
+        z-index: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+@-webkit-keyframes color{
+    0%{
+        color: $color-one;
+    }
+    25%{
+        color: $color-two;
+    }
+    50%{
+        color: $color-three;
+    }
+    75%{
+        color: $color-two;
+    }
+    100%{
+        color: $color-one;
+    }
+}
+@keyframes color{
+    0%{
+        color: $color-one;
+    }
+    25%{
+        color: $color-two;
+    }
+    50%{
+        color: $color-three;
+    }
+    75%{
+        color: $color-two;
+    }
+    100%{
+        color: $color-one;
     }
 }

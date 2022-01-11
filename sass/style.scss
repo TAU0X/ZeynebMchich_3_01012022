@@ -11,6 +11,28 @@
     font-family: "Roboto", sans-serif;
     margin: 0%;
 }
+.loader{
+    position: fixed;
+    inset: 0;
+    background-color: rgb(24, 23, 23);
+    z-index: 1;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: fade 2s;
+            animation: fade 2s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    span{
+    font-family: "Shrikhand";
+    color: $color-one; 
+    -webkit-animation: color 1s 2 linear; 
+            animation: color 1s 2 linear;
+    }
+}
 .header{
     width: $width-complet;
    
@@ -41,6 +63,7 @@ form{
        color:#353535
    }  
  }
+
 .nav{
     background-color: #f8f8f8;
     padding-bottom: 5%;
@@ -80,6 +103,9 @@ form{
     .nav__sec__titre h2,p{
         margin-top:3%; 
          padding: $padding;
+         margin-left: auto;
+         margin-right: auto;
+         text-align: center;
  @extend %center;
  align-items: center;
  @media only screen and (max-width: 750px){
@@ -88,6 +114,9 @@ form{
 
 
     }
+}
+.resto__titre h2{
+    margin-left: 3%;
 }
     .btn:hover{
         opacity: 0.6;
@@ -198,7 +227,11 @@ a{
 }
     .menu__item{
         @media only screen and (max-width: 750px){
-            width: 80%;
+            width: 90%;
+            font-size:90% ;
+            p{
+                margin-top: 3%;
+            }
         }      
     border-radius: 20px;
 transform: scale(1); 
@@ -236,7 +269,6 @@ overflow: hidden; }
     padding-right: 5%;
     padding-bottom: 2%;
     margin-top:-8% ;
-    transition: all 1s linear ;
      @media only screen and (max-width: 750px){
         font-size: 60%;
         margin-top:-3% ;
@@ -249,10 +281,9 @@ overflow: hidden; }
 .liked{
     cursor: pointer;
     color: transparent;
-    transform: scale(1);
+    
 }
 .like:hover .liked{
-    transform: scale(1.1);
 
   -webkit-background-clip: text;
   background-clip:text;
@@ -268,7 +299,7 @@ overflow: hidden; }
 
 footer{
     margin-top: 8%;
-    height: 200px;
+    height: auto;
     background-color: #353535;
     display: flex;
     justify-content: center;
@@ -278,7 +309,7 @@ footer{
     font-size: 120%;
     color: white;
     position: relative;
-    transition: color 250ms linear;
+    transition: color 25ms linear;
     width: 100%;
     background-color: #353535;
     color: white;
@@ -298,7 +329,7 @@ footer{
 a{
     opacity: 1;   
     color: white;
-    transition: all 4s linear ;
+    transition: all 2s linear ;
 }
 }
 
@@ -313,8 +344,8 @@ a{
     -webkit-text-fill-color: transparent;
     opacity: 1;
     cursor: pointer;
-    -webkit-animation: coloring 500ms  ;
-            animation: coloring 500ms  ;
+    -webkit-animation: coloring 50ms  ;
+            animation: coloring 50ms  ;
     -webkit-background-clip: text;
             background-clip: text;
     transition: ease-in 2s;
