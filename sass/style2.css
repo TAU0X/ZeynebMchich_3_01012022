@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .header h1, .command-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @-webkit-keyframes coloring {
@@ -125,7 +131,10 @@
 
 * {
   font-family: sans-serif;
-  overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -141,6 +150,7 @@ a:visited {
 .header {
   width: 100%;
   height: 80px;
+  background-color: white;
 }
 
 .header h1 {
@@ -162,13 +172,21 @@ a:visited {
   overflow: visible;
 }
 
+.menu {
+  background-color: #eaeaea;
+}
+
 .menu__titre {
   margin-top: 23%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 2% 1% 2% 0%;
   overflow: visible;
-  background-color: white;
+  background-color: #eaeaea;
   position: relative;
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
@@ -207,25 +225,26 @@ a:visited {
 }
 
 .menu__titre .like {
+  -webkit-transition: all 1s linear;
   transition: all 1s linear;
 }
 
 .menu__titre .like:hover {
   color: transparent;
+  -webkit-transition: 5ms;
   transition: 5ms;
 }
 
 .menu__titre .liked {
   color: transparent;
-  transform: scale(1);
 }
 
 .menu__titre .like:hover .liked {
-  transform: scale(1.1);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-animation: coloring 500ms;
   animation: coloring 500ms;
+  -webkit-transition: ease-in 1s;
   transition: ease-in 1s;
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
@@ -234,8 +253,8 @@ a:visited {
 }
 
 .menu__items {
-  flex-wrap: wrap;
-  background-color: white;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 750px) {
@@ -245,16 +264,25 @@ a:visited {
 }
 
 .menu__items .first, .menu__items .second, .menu__items .third {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eaeaea;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media only screen and (max-width: 750px) {
   .menu__items .first, .menu__items .second, .menu__items .third {
     position: relative;
-    background-color: white;
   }
 }
 
@@ -277,18 +305,29 @@ a:visited {
 
 .menu__items__card {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   cursor: pointer;
+  background-color: white;
   font-size: 110%;
   margin-top: 3%;
   padding: 1%;
   border-radius: 20px;
   height: 15%;
-  box-shadow: 0px 0px 25px 10px rgba(186, 186, 186, 0.329);
+  -webkit-box-shadow: 0px 0px 25px 10px rgba(186, 186, 186, 0.329);
+          box-shadow: 0px 0px 25px 10px rgba(186, 186, 186, 0.329);
   -webkit-animation: fadein ease-out 2s;
   animation: fadein ease-out 2s;
   -webkit-animation-delay: 0s;
@@ -303,21 +342,25 @@ a:visited {
   height: 110%;
   position: absolute;
   background-color: #9cfcc1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   float: right;
   margin-top: -2%;
   margin-left: 100%;
+  -webkit-transition: all .5s linear;
   transition: all .5s linear;
 }
 
 .menu__items__card .validation i {
   color: white;
   font-size: 140%;
-  transition: all .5s linear;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
 }
 
 @media only screen and (max-width: 750px) {
@@ -366,6 +409,7 @@ a:visited {
 .menu__items__card .prix2 {
   position: absolute;
   overflow: visible;
+  font-weight: bold;
   margin-right: 155%;
 }
 
@@ -376,7 +420,8 @@ a:visited {
 }
 
 .menu__items__card:hover {
-  box-shadow: 0px 0px 25px 10px rgba(179, 179, 179, 0.329);
+  -webkit-box-shadow: 0px 0px 25px 10px rgba(179, 179, 179, 0.329);
+          box-shadow: 0px 0px 25px 10px rgba(179, 179, 179, 0.329);
 }
 
 @media only screen and (max-width: 750px) {
@@ -394,23 +439,34 @@ a:visited {
 }
 
 .menu__items__card:hover .validation i {
-  transform: rotatez(360deg);
+  -webkit-transform: rotatez(360deg);
+          transform: rotatez(360deg);
+  -webkit-transition: all 0.5s  linear;
+  transition: all 0.5s  linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-animation-fill-mode: none;
   animation-fill-mode: none;
 }
 
 footer {
-  margin-top: 8%;
   height: auto;
   background-color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2%;
   color: white;
   font-size: 120%;
   color: white;
   position: relative;
+  -webkit-transition: color 250ms linear;
   transition: color 250ms linear;
   width: 100%;
   background-color: #353535;
@@ -419,9 +475,15 @@ footer {
 
 @media only screen and (max-width: 750px) {
   footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -437,11 +499,14 @@ footer li {
 footer a {
   opacity: 1;
   color: white;
+  -webkit-transition: all 4s linear;
   transition: all 4s linear;
 }
 
 .command-btn {
-  margin-top: 5%;
+  width: 100%;
+  height: 200px;
+  background-color: #eaeaea;
 }
 
 .command-btn .btn {
@@ -452,10 +517,16 @@ footer a {
   color: white;
   border: none;
   width: 25%;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-duration: 0.4s;
-  box-shadow: 0px 0px 25px 10px rgba(128, 128, 128, 0.329);
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-box-shadow: 0px 0px 25px 10px rgba(128, 128, 128, 0.329);
+          box-shadow: 0px 0px 25px 10px rgba(128, 128, 128, 0.329);
 }
 
 @media only screen and (max-width: 750px) {
@@ -474,14 +545,21 @@ footer a {
 
 .btn:hover {
   opacity: 0.6;
-  transform: scale(1.05);
-  transition-duration: 0.4s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 footer ul {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 footer a:hover {
@@ -492,8 +570,11 @@ footer a:hover {
   animation: coloring 500ms;
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-transition: ease-in 2s;
   transition: ease-in 2s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
+/*# sourceMappingURL=style2.css.map */

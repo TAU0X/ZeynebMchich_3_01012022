@@ -1,20 +1,22 @@
 @import "./utils/vars" ;
 *{
     font-family: sans-serif;
-    overflow: hidden;
+}
+body{
+    overflow-x: hidden;
     width: 100%;
+    
 }
 a{
     color: black;
-     text-decoration: none;
-     &:visited{
-         color: black;
-     }}
+    text-decoration: none;
+        &:visited{
+        color: black;
+        }}
 .header{
     width: $width-complet;
-   height: 80px;
-
-   
+    height: 80px;
+    background-color: white;
     h1{
         font-family: "Shrikhand";
         @extend %center;
@@ -32,19 +34,19 @@ a{
     img{
         width: 100%;
         overflow: visible;
-    
+        
     }}
     .menu{
-
+background-color: $bg-color;
         &__titre {
             margin-top: 23%;
             display: flex;
             justify-content: space-between;  
             padding:2% 1% 2% 0% ;
             overflow: visible;
-          background-color: white;
-          position: relative;
-         border-top-left-radius: 80px;
+            background-color: $bg-color;
+            position: relative;
+            border-top-left-radius: 80px;
         border-top-right-radius: 80px;
         height: 190px;
         width: 100%;
@@ -58,20 +60,18 @@ a{
             }
 
         h1{
-          font-family: "shrikhand";
-          padding-left: 1%;
-         
-         }
-          span{
-              padding-top: 3%;
-              padding-right: 2%;
-               @media only screen and (max-width: 750px) {
+        font-family: "shrikhand";
+        padding-left: 1%;   
+        }
+            span{
+            padding-top: 3%;
+            padding-right: 2%;
+            @media only screen and (max-width: 750px) {
                 margin-top: 4%;
                 }
-          }
-          .like{
-           
-          transition: all 1s linear ;
+            }
+        .like{
+        transition: all 1s linear ;
         }
         .like:hover{
             color: transparent;
@@ -79,20 +79,18 @@ a{
         }
         .liked{
             color: transparent;
-            transform: scale(1);
-         }
+            }
         .like:hover .liked{
-            transform: scale(1.1);
         
-          -webkit-background-clip: text;
-          background-clip:text;
-          -webkit-animation: coloring 500ms  ;
-                  animation: coloring 500ms  ;
-          transition: ease-in 1s;
-          -webkit-animation-delay: 0s;
-                  animation-delay: 0s;
-          -webkit-animation-fill-mode: forwards;
-                  animation-fill-mode: forwards;
+            -webkit-background-clip: text;
+            background-clip:text;
+                -webkit-animation: coloring 500ms  ;
+            animation: coloring 500ms  ;
+            transition: ease-in 1s;
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
         
         }
     }
@@ -100,7 +98,7 @@ a{
 
 .menu__items{
     flex-wrap: wrap;
-    background-color: white;
+    
     @media only screen and (max-width: 750px) {
         margin-top: -25%;
         
@@ -110,10 +108,10 @@ a{
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: $bg-color;
         flex-direction: column;
         @media only screen and (max-width: 750px) {
             position: relative;
-            background-color: white;
             }
     }
     &__title{
@@ -122,13 +120,13 @@ a{
         margin-left: 10px;
         overflow: visible;
         font-size: 120%;
-         width: 50px;
+        width: 50px;
         font-weight: lighter;
         display:inline-block;
         border-bottom: 5px #9cfcc1 solid ;
         @media only screen and (max-width: 750px) {
             position: relative;
-           
+        
             padding-top:5% ;
     
             }
@@ -142,6 +140,7 @@ a{
     flex-direction: column;
     position: relative;
     cursor: pointer;
+    background-color: white;
     font-size: 110%;
     margin-top: 3%;
     padding: 1%;
@@ -155,53 +154,48 @@ a{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-   .validation{
-     
-       width: 20%;
-       height: 110%;
-       position: absolute;
-       background-color: #9cfcc1;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       float: right;
-       margin-top: -2%;
-       margin-left: 100%;
-       transition:all .5s linear ;
-      
+
+    .validation{
+        width: 20%;
+        height: 110%;
+        position: absolute;
+        background-color: #9cfcc1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        margin-top: -2%;
+        margin-left: 100%;
+        transition:all .5s linear ; 
         
 
 
 
-       i{
-           color: white;
-           font-size: 140%;
-           transition:all .5s linear ;
-           -webkit-animation-fill-mode: forwards;
-                   animation-fill-mode: forwards;
-           @media only screen and (max-width: 750px) {
+        i{
+            color: white;
+            font-size: 140%;
+            @media only screen and (max-width: 750px) {
             font-size: 160%;
+        }        
         }
-           
-       }
 
 
-   }
+}
 
 
     h3{
-       margin: 10px;
-      width: 350px;
+        margin: 10px;
+        width: 350px;
         overflow: hidden;
         position: relative;
         text-overflow: ellipsis;
         white-space: nowrap;
-         @media only screen and (max-width: 750px) {
+            @media only screen and (max-width: 750px) {
         width:80%;
         }
-   }
+}
 
-   p{
+p{
         width: 350px;
         overflow: hidden;
         position: relative;
@@ -216,11 +210,12 @@ a{
             width:80%;
     
     }
-   } 
+    } 
 
-   .prix2{
+    .prix2{
     position: absolute; 
     overflow: visible;
+    font-weight: bold;
     margin-right: 155%;
     @media only screen and (max-width: 750px){
         margin-right: 190%;
@@ -228,9 +223,9 @@ a{
 
 }
 
-  }
 }
- .menu__items__card:hover {
+}
+.menu__items__card:hover {
     box-shadow: 0px 0px 25px 10px hsla(0, 0%, 70%, 0.329);
 p,h3{
     @media only screen and (max-width: 750px) {
@@ -241,21 +236,21 @@ p,h3{
         white-space: nowrap;
         }
 }
- .validation {
+    .validation {
     margin-left: 80%;
- i{
-     transform: rotatez(360deg);  
+    i{
+        transform: rotatez(360deg);  
+        transition:all 0.5s  linear ;
+            -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
     -webkit-animation-fill-mode:none;  
             animation-fill-mode:none;
 }
 
 }
 
-   
-   
 } 
 footer{
-    margin-top: 8%;
     height: auto;
     background-color: #353535;
     display: flex;
@@ -280,8 +275,7 @@ footer{
         font-size: 130%;
     }
     li{
-       padding-top: 5%;  
-       
+padding-top: 5%;       
 }
 a{
     opacity: 1;   
@@ -290,9 +284,11 @@ a{
 }
 }
 .command-btn{ 
-     @extend %center;
-     margin-top: 5%;
- 
+        @extend %center;
+        width: 100%;
+        height: 200px;
+        background-color: $bg-color;
+
 
     .btn {
         @media only screen and (max-width: 750px){
@@ -302,8 +298,8 @@ a{
         } 
 border-radius: 50px;
 font-size: 150%;
-  padding: 2%;
-  background: linear-gradient(
+padding: 2%;
+background: linear-gradient(
     355deg, $color-one 0%, $color-two 10%, $color-three 100%);
     color:white;
 border: none;  
@@ -312,11 +308,8 @@ transform: scale(1);
 transition-property: transform;
 transition-duration: 0.4s;
 box-shadow: 0px 0px 25px 10px hsla(0, 0%, 50%, 0.329);
-    @media only screen and (max-width: 991px) {
-     
+    @media only screen and (max-width: 991px) {  
         margin-top:5%; 
-       
-
 
 }
 }
@@ -329,19 +322,19 @@ box-shadow: 0px 0px 25px 10px hsla(0, 0%, 50%, 0.329);
 }
 footer ul{
     list-style-type: none;
-  display: flex;
+    display: flex;
 flex-direction: column;
 
 }
 footer a:hover {
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
-  cursor: pointer;
-  -webkit-animation: coloring 500ms  ;
-          animation: coloring 500ms  ;
-  -webkit-background-clip: text;
-          background-clip: text;
-  transition: ease-in 2s;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    cursor: pointer;
+    -webkit-animation: coloring 500ms  ;
+            animation: coloring 500ms  ;
+    -webkit-background-clip: text;
+            background-clip: text;
+    transition: ease-in 2s;
 transition-delay:0s ;
 -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;

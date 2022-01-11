@@ -5,7 +5,9 @@
 .global-frame{
     margin: 0%;
     width: $width-complet;
-    
+}
+body{
+    overflow-x: hidden;
 }
 *{
     font-family: "Roboto", sans-serif;
